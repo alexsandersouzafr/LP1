@@ -11,7 +11,7 @@ const navbar = ["HOME", "ABOUT", "FEATURE", "SCREENSHOT", "DOWNLOAD"];
 
 export default function NavBar() {
   return (
-    <div className="flex justify-center text-white">
+    <div className="flex justify-center text-white absolute w-full">
       <div className="max-w-[1170px] w-full flex flex-col gap-4 py-4">
         <div className="flex justify-between">
           <div className="flex gap-8">
@@ -24,14 +24,14 @@ export default function NavBar() {
               +1 (122) 123 9876
             </div>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-8">
             <Facebook />
             <Instagram />
             <Youtube />
             <Twitter />
           </div>
         </div>
-        <div className="bg-white h-16 flex justify-between items-center overflow-visible text-dark-blue rounded-md p-4">
+        <div className="bg-white h-[60px] flex justify-between items-center overflow-visible text-dark-blue rounded-md p-4">
           <div className="flex gap-4">
             {navbar.slice(0, 3).map((item, i) => (
               <button
