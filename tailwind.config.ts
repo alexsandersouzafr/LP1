@@ -4,9 +4,14 @@ export default {
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      colors: {
+        "royal-blue": "#5956E9",
+        "dark-blue": "#232233",
+        paragraph: "#6C6C72",
+      },
       fontFamily: {
         sans: [
-          "Inter",
+          "Josefin Sans",
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
