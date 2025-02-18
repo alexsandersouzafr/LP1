@@ -1,6 +1,10 @@
 import type { MetaFunction } from "@remix-run/node";
+import Footer from "~/components/footer";
 import NavBar from "~/components/nav-bar";
 import Section1 from "~/components/section-1";
+import Section2 from "~/components/section-2";
+import Section3 from "~/components/section-3";
+import Section4 from "~/components/section-4";
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,9 +15,13 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="bg-royal-blue h-screen font-sans relative ">
+    <div className="relative h-screen bg-royal-blue font-sans">
       <NavBar />
       <Section1 />
+      <Section2 />
+      <Section3 />
+      <Section4 />
+      <Footer />
     </div>
   );
 }

@@ -1,10 +1,10 @@
 export default function Section1() {
   return (
-    <div className="flex min-h-screen w-full items-center justify-center">
+    <div className="flex min-h-screen w-full items-center justify-center bg-[url('./bg.png')] bg-cover">
       <div className="relative flex w-full max-w-[1170px] items-center justify-between">
         <div className="relative">
-          <div className="absolute -right-8 -top-8 h-[400px] w-[500px] border-[10px] border-white/50" />
-          <div className="relative z-10 flex h-[400px] w-[500px] flex-col justify-between bg-white p-8">
+          <div className="absolute -right-8 -top-8 h-[450px] w-[550px] border-[10px] border-white/50" />
+          <div className="relative z-10 flex h-[450px] w-[550px] flex-col justify-between bg-white p-8">
             <h1 className="text-5xl text-royal-blue">
               A GREAT APP MAKES YOUR LIFE BETTER
             </h1>
