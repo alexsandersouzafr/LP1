@@ -8,7 +8,7 @@ const items = [
 
 export default function Section4() {
   return (
-    <div className="flex w-full justify-center bg-white py-16">
+    <div className="flex w-full justify-center bg-white px-2 py-16">
       <div className="flex min-h-screen w-full max-w-[1170px] flex-col items-center justify-center gap-8">
         <h1 className="text-3xl">Checkout Our Interface</h1>
         <p className="max-w-[600px] text-center text-paragraph">

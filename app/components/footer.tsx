@@ -1,9 +1,8 @@
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
-import React from "react";
 
 export default function Footer() {
   return (
-    <div className="w-full bg-dark-blue text-white">
+    <div className="w-full bg-dark-blue px-2 text-white">
       <div className="m-auto flex w-full max-w-[1170px] flex-col gap-4">
         <div className="grid w-full grid-cols-3 gap-16 border-b border-white py-16">
           <div className="flex flex-col gap-4">
