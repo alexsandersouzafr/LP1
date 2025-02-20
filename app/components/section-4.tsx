@@ -17,7 +17,7 @@ export default function Section4() {
           voluptate commodo.
         </p>
         <img src="screenshot.png" alt="interface preview" />
-        <div className="grid grid-cols-2 items-center gap-16">
+        <div className="flex grid-cols-2 flex-wrap items-center gap-16 md:grid">
           <div className="flex flex-col gap-16">
             <div className="flex flex-col gap-2">
               <h2 className="text-3xl text-dark-blue">DOWNLOAD APP NOW</h2>
@@ -26,7 +26,7 @@ export default function Section4() {
                 nostrud duis in eu consectetur enim sunt excepteur velit culpa
                 proident voluptate commodo.
               </p>
-              <div className="flex gap-8">
+              <div className="flex gap-2">
                 <img src="google-badge.png" alt="Google button." />
                 <img src="apple-badge.png" alt="Apple button" />
               </div>

@@ -15,13 +15,13 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="relative h-screen bg-royal-blue font-sans">
+    <div className="max-w-screen relative overflow-hidden bg-royal-blue font-sans">
       <NavBar />
       <Section1 />
-      {/* <Section2 />
+      <Section2 />
       <Section3 />
       <Section4 />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }

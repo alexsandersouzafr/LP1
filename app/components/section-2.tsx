@@ -4,7 +4,7 @@ const listItems = ["CREATIVE DESIGN", "EASY TO USE", "BEST USER EXPERIENCE"];
 
 export default function Section2() {
   return (
-    <div className="flex w-full justify-center bg-white px-2">
+    <div className="flex w-full justify-center bg-white px-2 py-16 lg:py-0">
       <div className="flex min-h-screen w-full max-w-[1170px] flex-col items-center justify-center gap-8">
         <h1 className="text-3xl">About Our App</h1>
         <p className="max-w-[600px] text-center text-paragraph">
@@ -13,11 +13,11 @@ export default function Section2() {
           voluptate commodo. Dolor laboris commodo sunt cillum eu do amet.
           Nostrud occaecat sit sit commodo laboris culpa.
         </p>
-        <div className="flex w-full justify-between">
-          <div className="flex w-1/2 items-center justify-center">
+        <div className="flex flex-col items-center justify-between gap-8 lg:grid lg:grid-cols-2">
+          <div className="flex w-full items-center justify-center">
             <img src="preview-2.png" alt="App preview" />
           </div>
-          <div className="flex flex-col gap-16">
+          <div className="flex flex-col items-center justify-center gap-16">
             {listItems.map((item, i) => (
               <div
                 className="flex max-w-[500px] items-start gap-4 rounded-lg border border-royal-blue/10 p-4 shadow-md"

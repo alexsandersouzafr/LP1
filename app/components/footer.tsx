@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div className="w-full bg-dark-blue px-2 text-white">
       <div className="m-auto flex w-full max-w-[1170px] flex-col gap-4">
-        <div className="grid w-full grid-cols-3 gap-16 border-b border-white py-16">
+        <div className="flex w-full grid-cols-3 flex-col gap-16 border-b border-white py-16 md:grid">
           <div className="flex flex-col gap-4">
             <h2 className="text-3xl">LOGO</h2>
             <p className="font-thin">
@@ -29,7 +29,7 @@ export default function Footer() {
               <li>Download</li>
             </ul>
           </div>
-          <div className="flex flex-col justify-between">
+          <div className="flex flex-col gap-8">
             <h2 className="text-3xl">NEWSLETTER</h2>
             <button className="rounded-md bg-royal-blue px-8 py-4 text-white">
               SUBSCRIBE
