@@ -10,7 +10,6 @@ export default function animateScroll() {
     end: "+=10000",
     scrub: true,
     pin: true,
-    snap: 'labels'
   };
 
   const timeline = gsap.timeline({
@@ -27,11 +26,10 @@ export default function animateScroll() {
 
   const sections = gsap.utils.toArray(".section");
 
-  // Animações de scroll
   timeline
-    .to(sections[0], { yPercent: 0 })
-    .to(sections[1], { yPercent: 0 })
+    .to(sections[0]!, { yPercent: 0 })
+    .to(sections[1]!, { yPercent: 0 })
     .to('.content2', { yPercent: -30 })
-    .to(sections[2], { yPercent: 0 })
+    .to(sections[2]!, { yPercent: 0 })
     .to('.content3', { yPercent: -30 });
 }
