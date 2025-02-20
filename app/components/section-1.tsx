@@ -1,8 +1,15 @@
+import { useGSAP } from "@gsap/react";
+import animateSection1 from "~/animations/section-1";
+
 export default function Section1() {
+  useGSAP(() => {
+    animateSection1();
+  });
+
   return (
-    <div className="flex min-h-screen w-full items-center justify-center overflow-hidden bg-[url('./bg.png')] bg-cover p-2">
+    <section className="flex min-h-screen w-full items-center justify-center overflow-hidden bg-[url('./bg.png')] bg-cover p-2">
       <div className="relative flex w-full max-w-[1170px] flex-wrap items-center justify-center gap-4 pt-32 md:pb-16 md:pt-44 lg:flex-nowrap lg:justify-between">
-        <div className="relative">
+        <div className="hero relative">
           <div className="absolute -right-8 -top-8 h-[250px] w-[250px] border-[10px] border-white/50 md:h-[450px] md:w-[550px]" />
           <div className="relative z-10 flex w-[300px] flex-col justify-between bg-white p-4 md:h-[450px] md:w-[550px] md:p-8">
             <h1 className="text-xl text-royal-blue md:text-5xl">
@@ -35,9 +42,9 @@ export default function Section1() {
         <img
           src="mobile-preview.png"
           alt="mobile preview"
-          className="relative -right-12 shrink md:-right-24 md:top-16 md:scale-90 xl:-right-40 xl:scale-100"
+          className="preview-img relative -right-12 shrink md:-right-24 md:top-16 md:scale-90 xl:-right-40 xl:scale-100"
         />
       </div>
-    </div>
+    </section>
   );
 }

@@ -2,7 +2,7 @@ import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
-    <div className="w-full bg-dark-blue px-2 text-white">
+    <footer className="w-full bg-dark-blue px-2 text-white">
       <div className="m-auto flex w-full max-w-[1170px] flex-col gap-4">
         <div className="flex w-full grid-cols-3 flex-col gap-16 border-b border-white py-16 md:grid">
           <div className="flex flex-col gap-4">
@@ -38,6 +38,6 @@ export default function Footer() {
         </div>
         <div className="pb-2 text-right">Developed by AS WEB DEV.</div>
       </div>
-    </div>
+    </footer>
   );
 }

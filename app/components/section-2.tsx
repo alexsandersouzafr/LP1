@@ -4,7 +4,7 @@ const listItems = ["CREATIVE DESIGN", "EASY TO USE", "BEST USER EXPERIENCE"];
 
 export default function Section2() {
   return (
-    <div className="flex w-full justify-center bg-white px-2 py-16 lg:py-0">
+    <section className="section flex w-full justify-center bg-white px-2 py-16 lg:py-0">
       <div className="flex min-h-screen w-full max-w-[1170px] flex-col items-center justify-center gap-8">
         <h1 className="text-3xl">About Our App</h1>
         <p className="max-w-[600px] text-center text-paragraph">
@@ -37,6 +37,6 @@ export default function Section2() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
