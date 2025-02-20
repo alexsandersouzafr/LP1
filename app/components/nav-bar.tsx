@@ -4,23 +4,75 @@ import {
   MailPlus,
   Menu,
   Phone,
-  Sandwich,
   Twitter,
   X,
   Youtube,
 } from "lucide-react";
 import { useState } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const navbar = ["HOME", "ABOUT", "FEATURE", "SCREENSHOT", "DOWNLOAD"];
 
 export default function NavBar() {
   const [openMenu, setOpenMenu] = useState(false);
 
+  useGSAP(() => {
+    gsap.set(".navbar", {
+      y: -20,
+      opacity: 0,
+    });
+    gsap.set(".contacts>div", { x: -20, opacity: 0 });
+    gsap.set(".icons>svg", { x: 20, opacity: 0 });
+    gsap.set(".nav-button", { x: 10, opacity: 0 });
+    gsap.set(".logo", { scaleY: 0, opacity: 0 });
+    gsap.set(".logo>img", { opacity: 0 });
+    gsap
+      .timeline({ delay: 0.5, duration: 1, ease: "power2.in" })
+      .to(".navbar", {
+        y: 0,
+        opacity: 1,
+      })
+      .to(
+        ".contacts>div",
+        {
+          x: 0,
+          opacity: 1,
+          stagger: 0.2,
+        },
+        "<",
+      )
+      .to(
+        ".icons>svg",
+        {
+          x: 0,
+          opacity: 1,
+          stagger: 0.2,
+        },
+        "<",
+      )
+      .to(
+        ".nav-button",
+        {
+          x: 0,
+          opacity: 1,
+          stagger: 0.2,
+        },
+        "<",
+      )
+      .to(".logo", {
+        scaleY: 1,
+        opacity: 1,
+        duration: 1,
+      })
+      .to(".logo>img", { opacity: 1, duration: 2 });
+  });
+
   return (
-    <div className="absolute flex w-full justify-center px-2 text-white">
+    <div className="navbar absolute flex w-full justify-center px-2 text-white">
       <div className="flex w-full max-w-[1170px] flex-col gap-4 py-4">
         <div className="hidden justify-between lg:flex">
-          <div className="flex gap-8">
+          <div className="contacts flex gap-8">
             <div className="flex items-center gap-2">
               <MailPlus />
               contato@email.com
@@ -30,7 +82,7 @@ export default function NavBar() {
               +1 (122) 123 9876
             </div>
           </div>
-          <div className="flex items-center gap-8">
+          <div className="icons flex items-center gap-8">
             <Facebook />
             <Instagram />
             <Youtube />
@@ -60,28 +112,28 @@ export default function NavBar() {
           <div className="flex gap-4">
             {navbar.slice(0, 3).map((item, i) => (
               <button
-                className="text-md rounded-md px-4 py-2 transition-all duration-300 hover:bg-royal-blue hover:text-white"
+                className="nav-button text-md rounded-md px-4 py-2 transition-all duration-300 hover:bg-royal-blue hover:text-white"
                 key={i}
               >
                 {item}
               </button>
             ))}
           </div>
-          <button className="h-24 shrink-0 rounded-md bg-white p-8 shadow-sm transition-all duration-300">
+          <button className="logo h-24 shrink-0 rounded-md bg-white p-8 shadow-sm">
             <img src="./logo.png" alt="logo" />
           </button>
           <div className="flex gap-4">
             {navbar.slice(3).map((item, i) =>
               item === "DOWNLOAD" ? (
                 <button
-                  className="text-md rounded-md bg-royal-blue px-4 py-2 text-white"
+                  className="nav-button text-md rounded-md bg-royal-blue px-4 py-2 text-white"
                   key={i}
                 >
                   {item}
                 </button>
               ) : (
                 <button
-                  className="text-md rounded-md px-4 py-2 transition-all duration-300 hover:bg-royal-blue hover:text-white"
+                  className="nav-button text-md rounded-md px-4 py-2 transition-all duration-300 hover:bg-royal-blue hover:text-white"
                   key={i}
                 >
                   {item}

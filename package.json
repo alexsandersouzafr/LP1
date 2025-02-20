@@ -11,9 +11,11 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@remix-run/node": "^2.15.3",
     "@remix-run/react": "^2.15.3",
     "@remix-run/serve": "^2.15.3",
+    "gsap": "^3.12.7",
     "isbot": "^4.1.0",
     "lucide-react": "^0.475.0",
     "react": "^18.2.0",
