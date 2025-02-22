@@ -1,4 +1,7 @@
+import { useGSAP } from "@gsap/react";
 import { Download, Star, ThumbsUp } from "lucide-react";
+import { useRef } from "react";
+import animateSection5 from "~/animations/section-5";
 
 const items = [
   { icon: <Download />, metric: "12.4M", text: "DOWNLOADS" },
@@ -7,12 +10,18 @@ const items = [
 ];
 
 export default function Section5() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  useGSAP(() => animateSection5(sectionRef.current!), { scope: sectionRef });
+
   return (
-    <section className="section flex w-full justify-center bg-white px-4 py-16">
+    <section
+      ref={sectionRef}
+      className="section flex w-full justify-center bg-white px-4 py-16"
+    >
       <div className="flex w-full max-w-[1170px] flex-col items-center justify-center gap-8">
         <div className="flex grid-cols-2 flex-wrap items-center gap-4 md:grid">
           <div className="flex flex-col gap-16">
-            <div className="flex flex-col gap-2">
+            <div className="paragraph flex flex-col gap-2">
               <h2 className="text-3xl text-dark-blue">DOWNLOAD APP NOW</h2>
               <p className="text-paragraph">
                 Velit consequat reprehenderit exercitation commodo. Ad minim
@@ -28,7 +37,7 @@ export default function Section5() {
               {items.map(({ icon, metric, text }, i) => (
                 <div
                   key={i}
-                  className="flex flex-col items-center gap-4 rounded-md bg-royal-blue p-4 text-white"
+                  className="item flex flex-col items-center gap-4 rounded-md bg-royal-blue p-4 text-white"
                 >
                   {icon}
                   <h4 className="text-2xl md:text-4xl">{metric}</h4>
@@ -37,7 +46,7 @@ export default function Section5() {
               ))}
             </div>
           </div>
-          <img src="design.png" alt="interface preview" />
+          <img src="design.png" alt="interface preview" className="image" />
         </div>
       </div>
     </section>

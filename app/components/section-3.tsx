@@ -1,11 +1,20 @@
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import animateSection3 from "~/animations/section-3";
 import { items } from "~/mocks/features";
 
 export default function Section3() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  useGSAP(() => animateSection3(sectionRef.current!), { scope: sectionRef });
+
   return (
-    <section className="section flex w-full justify-center bg-[url(bg.png)] bg-cover px-2 py-16 text-white">
+    <section
+      ref={sectionRef}
+      className="section flex w-full justify-center bg-[url(bg.png)] bg-cover px-2 py-16 text-white"
+    >
       <div className="flex w-full max-w-[1170px] flex-col items-center justify-center gap-8">
-        <h1 className="text-3xl">Features</h1>
-        <p className="max-w-[600px] text-center">
+        <h1 className="title text-3xl">Features</h1>
+        <p className="paragraph max-w-[600px] text-center">
           Velit consequat reprehenderit exercitation commodo. Ad minim nostrud
           duis in eu consectetur enim sunt excepteur velit culpa proident
           voluptate commodo. Dolor laboris commodo sunt cillum eu do amet.
@@ -58,7 +67,7 @@ function FeatureItem({
   return (
     <div
       data-align={align}
-      className="flex scale-90 flex-col items-center gap-4 data-[align=left]:items-start data-[align=right]:items-end"
+      className="item flex scale-90 flex-col items-center gap-4 data-[align=left]:items-start data-[align=right]:items-end"
     >
       {item.svg}
 
