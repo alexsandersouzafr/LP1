@@ -7,7 +7,7 @@ export default function Section1() {
   });
 
   return (
-    <section className="flex min-h-screen w-full items-center justify-center overflow-hidden bg-[url('./bg.png')] bg-cover p-2">
+    <section className="flex w-full items-center justify-center overflow-hidden bg-[url('./bg.png')] bg-cover p-2">
       <div className="relative flex w-full max-w-[1170px] flex-wrap items-center justify-center gap-4 pt-32 md:pb-16 md:pt-44 lg:flex-nowrap lg:justify-between">
         <div className="hero relative">
           <div className="absolute -right-8 -top-8 h-[250px] w-[250px] border-[10px] border-white/50 md:h-[450px] md:w-[550px]" />
@@ -24,7 +24,7 @@ export default function Section1() {
               <h2 className="text-md text-dark-blue md:text-3xl">
                 DOWNLOAD APP NOW
               </h2>
-              <div className="grid grid-cols-2 gap-2 md:gap-8">
+              <div className="grid grid-cols-2 gap-2 md:flex md:gap-4">
                 <img
                   src="google-badge.png"
                   alt="Google button."

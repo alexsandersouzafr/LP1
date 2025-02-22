@@ -2,8 +2,8 @@ import { items } from "~/mocks/features";
 
 export default function Section3() {
   return (
-    <section className="section relative flex h-screen w-full justify-center overflow-hidden bg-[url(bg.png)] bg-cover px-2 py-16 text-white">
-      <div className="content2 absolute flex min-h-screen w-full max-w-[1170px] flex-col items-center justify-center gap-8">
+    <section className="section flex w-full justify-center bg-[url(bg.png)] bg-cover px-2 py-16 text-white">
+      <div className="flex w-full max-w-[1170px] flex-col items-center justify-center gap-8">
         <h1 className="text-3xl">Features</h1>
         <p className="max-w-[600px] text-center">
           Velit consequat reprehenderit exercitation commodo. Ad minim nostrud

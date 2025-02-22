@@ -7,6 +7,7 @@ import Section1 from "~/components/section-1";
 import Section2 from "~/components/section-2";
 import Section3 from "~/components/section-3";
 import Section4 from "~/components/section-4";
+import Section5 from "~/components/section-5";
 
 export const meta: MetaFunction = () => {
   return [
@@ -16,7 +17,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  useGSAP(() => animeteScroll());
+  // useGSAP(() => animeteScroll());
   return (
     <div className="animate-scroll max-w-screen relative min-h-screen overflow-hidden bg-royal-blue font-sans">
       <NavBar />
@@ -24,6 +25,7 @@ export default function Index() {
       <Section2 />
       <Section3 />
       <Section4 />
+      <Section5 />
       <Footer />
     </div>
   );
